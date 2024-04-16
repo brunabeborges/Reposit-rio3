@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void desenha (int N)
+{
+  if (N<1) printf ("Erro\n");
+  else if (N == 1) printf("*\n");
+  else
+  {
+    desenha (N-1);
+      for (int conta = 1; conta <= N; conta ++)
+        {
+          printf("*");
+        }
+    printf ("\n");
+    }
+}
+int main ()
+{
+  int linhas;
+  printf("Digite a quantidade de linhas: ");
+  scanf("%d", &linhas);
+  desenha(linhas);
+  return 0;
+}
